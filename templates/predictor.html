@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Salary Prediction</title>
+</head>
+
+<body>
+
+    <h1>Employee Salary Prediction</h1>
+
+    <form action="/predict" method="POST">
+
+        <label>Years of Experience:</label>
+        <input type="number" name="experience" step="0.1" required>
+
+        <br><br>
+
+        <button type="submit">Predict Salary</button>
+
+    </form>
+
+    {% if salary is not none %}
+        <h2>Predicted Salary: ₹{{ salary }}</h2>
+    {% endif %}
+
+</body>
+</html>
